@@ -1,0 +1,300 @@
+// colors
+$background: #FFFFFF
+$disabled: #E3DAF9
+$primary: #6E41E2
+$hover: #5835B0
+$active: #472C8A
+$white: #FFFFFF
+$whiteXS: rgba(#FFFFFF, 0.96)
+$whiteS: rgba(#FFFFFF, 0.8)
+$grayM: #FAFAFA
+$grayL: #F1F1F1
+$grayS: #D4D4D4
+$gray: rgba(#D4D4D4, 0.48)
+$grayK: #6B6B6B
+$black: #111
+$redGirl: #F9E3E3
+$redBoy: #F2CACA
+$red: #DB524E
+$superRed: #C7302B
+$green: #27AE60
+$blue: #428BF9
+
+// shadows
+$shadowDefault: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08)
+$shadowInputError: 0px 4px 4px rgba(255, 196, 196, 0.04), 0px 4px 40px rgba(255, 196, 196, 0.24)
+$shadowInputSuccess: 0px 4px 4px rgba(39, 174, 96, 0.04), 0px 4px 40px rgba(39, 174, 96, 0.24)
+$shadowHover: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 56px rgba(51, 51, 51, 0.16)
+$shadowActive: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51, 0.24)
+
+// topography
+.blackHeading
+	font-size: 56px
+	font-family: Montserrat, sans-serif
+	font-weight: 900
+	line-height: 64px
+.h2BoldMontserrat
+	font-size: 48px
+	font-family: Montserrat, sans-serif
+	font-weight: bold
+	line-height: 56px
+.h3BoldMontserrat
+	font-size: 40px
+	font-family: Montserrat, sans-serif
+	font-weight: bold
+	line-height: 48px
+.h4BoldMontserrat
+	font-size: 32px
+	font-family: Montserrat, sans-serif
+	font-weight: bold
+	line-height: 40px
+.h5BoldMontserrat
+	font-size: 24px
+	font-family: Montserrat,sans-serif
+	font-weight: bold
+	line-height: 32px
+.h6BoldMontserrat
+	font-size: 20px
+	font-family: Montserrat, sans-serif
+	font-weight: bold
+	line-height: 28px
+.p1RegularRoboto
+	font-size: 20px
+	font-family: Roboto, sans-serif
+	font-weight: normal
+	line-height: 28px
+.p2RegularRoboto
+	font-size: 16px
+	font-family: Roboto, sans-serif
+	font-weight: normal
+	line-height: 24px
+.p3RegularRoboto
+	font-size: 13px
+	font-family: Roboto, sans-serif
+	font-weight: normal
+	line-height: 20px
+.p1RegularRobotoBold
+	font-size: 20px
+	font-family: Roboto, sans-serif
+	font-weight: bold
+	line-height: 28px
+.p2RegularRobotoBold
+	font-size: 16px
+	font-family: Roboto, sans-serif
+	font-weight: bold
+	line-height: 24px
+.p3RegularRobotoBold
+	font-size: 13px
+	font-family: Roboto, sans-serif
+	font-weight: bold
+	line-height: 20px
+
+// text
+.accent-text
+	cursor: pointer
+	color: $primary
+	&:hover
+		color: $hover
+
+// input
+.input
+	position: relative
+	width: 100%
+	height: 56px
+	&__label
+		color: rgba(17, 17, 17, 0.48)
+		position: absolute
+		left: 4%
+		top: 50%
+		@extend .p2RegularRoboto
+		transition: 0.3s
+		transform: translateY(-50%)
+		&--active
+			transition: 0.3s
+			@extend .p3RegularRoboto
+			transform: translateY(-22px)
+	&__area
+		width: 100%
+		height: 100%
+		padding: 0
+		padding: 26px 16px 6px 16px
+		background: $white
+		border-radius: 4px
+		box-shadow: $shadowDefault
+		outline: none
+		border: none
+		@extend .p2RegularRoboto
+	&:hover
+		box-shadow: $shadowActive
+	&--error
+		background: $redGirl !important
+		margin-bottom: 8px
+		@extend .p2RegularRoboto
+		&-details
+			color: $red
+			@extend .p2RegularRoboto
+
+// button
+.button
+	width: 100%
+	height: 44px
+	cursor: pointer
+	outline: none
+	padding: 10px 20px
+	@extend .p2RegularRoboto
+	border-radius: 4px
+	border: none
+	&:disabled
+		cursor: initial
+	&--labelIcon
+		img,svg
+			margin-right: 10px
+	&--icon
+		width: 44px
+		height: 44px
+	&--iconCircle
+		border-radius: 50%
+	&--primary
+		background: $primary
+		color: $white
+		svg
+			path
+				fill: $white
+		&:hover
+			background: $hover
+		&:active
+			background: $active
+		&:focus
+			background: $primary
+			border: 2px solid $active
+		&:disabled
+			background: $disabled
+	&--primaryWhite
+		background: $white
+		color: $primary
+		svg
+			path
+				fill: $primary
+		&:hover
+			background: $whiteS
+		&:active
+			background: $whiteXS
+		&:focus
+			background: $primary
+			border: 2px solid $active
+		&:disabled
+			background: $white
+	&--flat
+		background: transparent
+		color: $primary
+		svg
+			path
+				fill: $primary
+		&:hover
+			background: rgba(110, 65, 226, 0.04)
+		&:active
+			background: $whiteXS
+		&:focus
+			background: transparent
+			border: 2px solid $grayK
+		&:disabled
+			background: transparent
+			color: rgba($primary, 0.7)
+
+// radio-button
+.radio
+	display: flex
+	align-items: center
+	cursor: pointer
+	@extend .p2RegularRoboto
+	&__input
+		outline: none
+		cursor: pointer
+		appearance: none
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		padding: 0
+		margin: 0 12px 0 0
+		background: $disabled
+		position: relative
+		z-index: 10
+		&:hover
+			background: rgba($primary, 0.56)
+		&:checked
+			background: $primary
+			&:before
+				content: ''
+				position: absolute
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				background-color: $white
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			&:hover
+				background: $hover
+			&:focus
+				background: $primary
+				border: 2px solid $active
+		&:disabled
+			background: $disabled
+
+// checkbox
+.checkbox
+	display: flex
+	align-items: center
+	position: relative
+	@extend .p2RegularRoboto
+	&__input
+		appearance: none
+		background: $white
+		outline: none
+		margin: 0 12px 0 0
+		cursor: pointer
+		height: 24px
+		width: 24px
+		border: 1px solid $grayS
+		border-radius: 4px
+		z-index: 10
+		&:hover
+			background: $grayM
+		&:active
+			background: $grayL
+		&:focus
+			background: $white
+			border: 2px solid $gray
+		&:disabled
+			border-color: $grayS
+		&:checked
+			background: $primary
+			border-color: $primary
+			&::after
+				content: ''
+				width: 11px
+				height: 4px
+				position: absolute
+				top: 7px
+				left: 5px
+				border: 3px solid $white
+				border-radius: 3px
+				border-top: none
+				border-right: none
+				opacity: 1
+				transform: rotate(-45deg)
+			&:hover
+				background: $hover
+				border-color: $hover
+			&:active
+				background: $active
+				border-color: $active
+			&:focus
+				background: $primary
+				border: 2px solid $active
+			&:disabled
+				background: $primary
+				opacity: 0.4
+	&--error > input
+		background: $redGirl
+		border-color: $redGirl

@@ -1,0 +1,91 @@
+@import '../../sass/variables.sass'
+
+.profile
+	max-width: 474px
+	width: 100%
+	height: auto
+	min-height: 0
+	background: $white
+	box-shadow: $shadowDefault
+	border-radius: 8px
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	padding: 32px
+	margin: 0 16px
+	&__text
+		@extend .p2RegularRoboto
+	&__title
+		margin-bottom: 14px
+		@extend .h4BoldMontserrat
+	&__links
+		padding: 0
+		margin: 0
+		list-style: none
+		display: flex
+	&__link
+		cursor: pointer
+		color: $grayK
+		padding-bottom: 15px
+		@extend .p2RegularRoboto
+		&:not(:last-of-type)
+			margin-right: 24px
+		&:hover
+			color: $black
+		&--active
+			color: $black
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 2px
+				background: $primary
+	&__social-connect
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin: 0 -32px
+		padding: 0 32px
+		border-top: 1px solid $grayL
+		min-height: 60px
+		background: $grayM
+	&__social-losung
+		@extend .p3RegularRoboto
+	&__social-links
+		list-style: none
+		display: flex
+	&__social-link
+		position: relative
+		width: 36px
+		height: 36px
+		border-radius: 50%
+		cursor: pointer
+		background: $white
+		&:not(:last-of-type)
+			margin-right: 8px
+		&:hover
+			background: $disabled
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	&__connection-fields
+		display: flex
+		flex-direction: column
+
+		padding-top: 24px
+	&__form
+		display: flex
+		flex-direction: column
+		margin-bottom: 32px
+		.input
+			margin-bottom: 20px
+	&__buttons
+		.button
+			&:not(:last-of-type)
+				margin-bottom: 8px

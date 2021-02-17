@@ -1,0 +1,26 @@
+@import '../../sass/variables'
+
+.modal-window
+	background-color: rgba($black, 0.9)
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 1000
+	padding: 0 20px
+	&__wrapper
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: $white
+		min-height: 200px
+		width: 100%
+		max-width: 960px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 20px
+		text-align: center
+		// margin: 0 50px
