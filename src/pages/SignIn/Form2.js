@@ -96,7 +96,7 @@ function Form2() {
 					ref={register({
 						required: "Required field",
 					})}	
-				/>I accept the terms of the offer of<span className='accent-text' onClick={ () => setPrivacyPoliceModal(true)}>&ensp;the privacy policy</span>
+				/><span>I accept the terms of the offer of<span className='accent-text' onClick={ () => setPrivacyPoliceModal(true)}>&ensp;the privacy policy</span></span>
 			</label>
 			<PrivicyPolice isOpen={privacyPoliceModal} onClose={() => setPrivacyPoliceModal(false)}/>
 		</form>

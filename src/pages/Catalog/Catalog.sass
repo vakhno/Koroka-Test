@@ -5,8 +5,9 @@
 		display: grid
 		justify-content: center
 		justify-items: center
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
 		grid-gap: 32px
+		margin-bottom: 32px
 	&__page-info
 		margin-bottom: 32px
 	&__title
@@ -26,3 +27,18 @@
 		.datalist
 			width: 100%
 			max-width: 259px
+
+@media screen and ( max-width: 620px )
+	.catalog
+		&__courses
+			grid-template-columns: 1fr
+		&__title
+			text-align: center
+		&__text
+			text-align: center
+		&__search-form
+			flex-direction: column
+			.input-search
+				margin-bottom: 16px
+			.datalist
+				max-width: 100%

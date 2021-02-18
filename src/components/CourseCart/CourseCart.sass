@@ -4,9 +4,9 @@
 	background: $white
 	border-radius: 8px
 	width: 100%
-	max-width: 400px
+	max-width: 560px
 	box-shadow: $shadowDefault
-	max-height: 347px
+	min-height: 347px
 	height: 100%
 	overflow: hidden
 	&__wrapper
@@ -94,3 +94,21 @@
 				max-width: 77px
 			&:not(:last-of-type)
 				margin-right: 6px
+
+@media screen and ( max-width: 520px )
+	.course-cart
+		&__course-info
+			flex-direction: column
+		&__course-info-item
+			&:not(:last-of-type)
+				margin-bottom: 8px
+		&__buttons-block
+			flex-direction: column
+			align-items: center
+			.button
+				&:first-child
+					max-width: 100%
+				&:nth-child(2)
+					max-width: 100%
+				&:not(:last-of-type)
+					margin-right: 0px

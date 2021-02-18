@@ -23,38 +23,6 @@
 		@extend .h5BoldMontserrat
 		&:hover
 			color: $primary
-	&__nav
-		height: 100%
-		display: flex
-		margin-right: 56px
-	&__nav-items
-		display: flex
-		align-items: center
-		list-style: none
-	&__nav-item
-		height: 100%
-		&:not(:last-of-type)
-			margin-right: 24px
-	&__nav-link
-		height: 100%
-		display: flex
-		align-items: center
-		position: relative
-		text-decoration: none
-		color: rgba(17, 17, 17, 0.48)
-		@extend .p2RegularRoboto
-		&:hover
-			color: $black
-		&--active
-			color: $black
-			&::after
-				content: ''
-				position: absolute
-				bottom: 0
-				left: 0
-				width: 100%
-				height: 2px
-				background: $primary
 	&__profile
 		display: flex
 		align-items: center
@@ -79,3 +47,90 @@
 				top: 50%
 				left: 50%
 				transform: translate(-50%, -50%)
+
+.nav
+	&--desktop
+		height: 100%
+		display: flex
+		margin-right: 56px
+		.nav
+			&__items
+				display: flex
+				align-items: center
+				list-style: none
+			&__item
+				height: 100%
+				&:not(:last-of-type)
+					margin-right: 24px
+			&__link
+				height: 100%
+				display: flex
+				align-items: center
+				position: relative
+				text-decoration: none
+				color: rgba(17, 17, 17, 0.48)
+				@extend .p2RegularRoboto
+				&:hover
+					color: $black
+				&--active
+					color: $black
+					&::after
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 0
+						width: 100%
+						height: 2px
+						background: $primary
+	&--mobile
+		margin-right: 0
+		position: fixed
+		min-height: 100%
+		width: 100%
+		top: 0
+		right: -100%
+		margin-top: $header
+		background: $grayS
+		.nav
+			&__items
+				height: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				list-style: none
+			&__item
+				height: 100%
+				width: 100%
+			&__link
+				padding: 22px 0
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				position: relative
+				text-decoration: none
+				color: rgba(17, 17, 17, 0.48)
+				@extend .h6BoldMontserrat
+				&:hover
+					color: $black
+					background: $disabled
+				&--active
+					color: $grayK
+					background: $grayL
+	&--mobile--active
+		right: 0
+
+.burger-icon, svg
+	width: 34px
+	height: 34px
+	path
+		fill: $primary
+
+@media screen and ( max-width:  780px )
+	.header
+		&__profile
+			margin-right: 12px
+			&-name
+				display: none
