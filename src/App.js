@@ -6,7 +6,7 @@ import Header from './components/Header/Header'
 
 function App() {
 	return (
-		<Router basename='/Koroka'>
+		<Router basename='/Koroka-Test'>
 			<Switch>
 				<Route exact path='/' component={SignIn}/>
 				<div className="content">
