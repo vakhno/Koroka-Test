@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Koroka-Test/static/css/main.f588d307.chunk.css",
+    "main.js": "/Koroka-Test/static/js/main.4decae03.chunk.js",
+    "main.js.map": "/Koroka-Test/static/js/main.4decae03.chunk.js.map",
+    "runtime-main.js": "/Koroka-Test/static/js/runtime-main.f75e8b36.js",
+    "runtime-main.js.map": "/Koroka-Test/static/js/runtime-main.f75e8b36.js.map",
+    "static/js/2.91f143f4.chunk.js": "/Koroka-Test/static/js/2.91f143f4.chunk.js",
+    "static/js/2.91f143f4.chunk.js.map": "/Koroka-Test/static/js/2.91f143f4.chunk.js.map",
+    "index.html": "/Koroka-Test/index.html",
+    "static/css/main.f588d307.chunk.css.map": "/Koroka-Test/static/css/main.f588d307.chunk.css.map",
+    "static/js/2.91f143f4.chunk.js.LICENSE.txt": "/Koroka-Test/static/js/2.91f143f4.chunk.js.LICENSE.txt",
+    "static/media/bg1.b3844f71.jpg": "/Koroka-Test/static/media/bg1.b3844f71.jpg",
+    "static/media/bg2.3fd14ff2.jpg": "/Koroka-Test/static/media/bg2.3fd14ff2.jpg",
+    "static/media/bg3.99408e28.jpg": "/Koroka-Test/static/media/bg3.99408e28.jpg",
+    "static/media/chrome.0693ccf5.svg": "/Koroka-Test/static/media/chrome.0693ccf5.svg",
+    "static/media/Header.sass": "/Koroka-Test/static/media/dropdownIcon.906442d6.svg",
+    "static/media/closeMenuIcon.a95234ac.svg": "/Koroka-Test/static/media/closeMenuIcon.a95234ac.svg",
+    "static/media/facebook.6dbd460b.svg": "/Koroka-Test/static/media/facebook.6dbd460b.svg",
+    "static/media/lessonsIcon.7bd077ae.svg": "/Koroka-Test/static/media/lessonsIcon.7bd077ae.svg",
+    "static/media/lionIcon.0e9d7abe.svg": "/Koroka-Test/static/media/lionIcon.0e9d7abe.svg",
+    "static/media/minutesIcon.d5ad75a0.svg": "/Koroka-Test/static/media/minutesIcon.d5ad75a0.svg",
+    "static/media/openMenuIcon.6443f808.svg": "/Koroka-Test/static/media/openMenuIcon.6443f808.svg",
+    "static/media/searchIcon.de505dee.svg": "/Koroka-Test/static/media/searchIcon.de505dee.svg",
+    "static/media/tasksIcon.12f0bde2.svg": "/Koroka-Test/static/media/tasksIcon.12f0bde2.svg",
+    "static/media/vk.b72417b7.svg": "/Koroka-Test/static/media/vk.b72417b7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f75e8b36.js",
+    "static/js/2.91f143f4.chunk.js",
+    "static/css/main.f588d307.chunk.css",
+    "static/js/main.4decae03.chunk.js"
+  ]
+}
