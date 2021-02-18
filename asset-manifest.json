@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Koroka-Test/static/css/main.f588d307.chunk.css",
-    "main.js": "/Koroka-Test/static/js/main.c911d18c.chunk.js",
-    "main.js.map": "/Koroka-Test/static/js/main.c911d18c.chunk.js.map",
+    "main.css": "/Koroka-Test/static/css/main.5693c182.chunk.css",
+    "main.js": "/Koroka-Test/static/js/main.7258dd12.chunk.js",
+    "main.js.map": "/Koroka-Test/static/js/main.7258dd12.chunk.js.map",
     "runtime-main.js": "/Koroka-Test/static/js/runtime-main.f75e8b36.js",
     "runtime-main.js.map": "/Koroka-Test/static/js/runtime-main.f75e8b36.js.map",
     "static/js/2.91f143f4.chunk.js": "/Koroka-Test/static/js/2.91f143f4.chunk.js",
     "static/js/2.91f143f4.chunk.js.map": "/Koroka-Test/static/js/2.91f143f4.chunk.js.map",
     "index.html": "/Koroka-Test/index.html",
-    "static/css/main.f588d307.chunk.css.map": "/Koroka-Test/static/css/main.f588d307.chunk.css.map",
+    "static/css/main.5693c182.chunk.css.map": "/Koroka-Test/static/css/main.5693c182.chunk.css.map",
     "static/js/2.91f143f4.chunk.js.LICENSE.txt": "/Koroka-Test/static/js/2.91f143f4.chunk.js.LICENSE.txt",
     "static/media/bg1.b3844f71.jpg": "/Koroka-Test/static/media/bg1.b3844f71.jpg",
     "static/media/bg2.3fd14ff2.jpg": "/Koroka-Test/static/media/bg2.3fd14ff2.jpg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.f75e8b36.js",
     "static/js/2.91f143f4.chunk.js",
-    "static/css/main.f588d307.chunk.css",
-    "static/js/main.c911d18c.chunk.js"
+    "static/css/main.5693c182.chunk.css",
+    "static/js/main.7258dd12.chunk.js"
   ]
 }
