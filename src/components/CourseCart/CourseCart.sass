@@ -1,0 +1,96 @@
+@import '../../sass/variables'
+
+.course-cart
+	background: $white
+	border-radius: 8px
+	width: 100%
+	max-width: 400px
+	box-shadow: $shadowDefault
+	max-height: 347px
+	height: 100%
+	overflow: hidden
+	&__wrapper
+		display: flex
+		flex-direction: column
+		min-height: 100%
+	&__top
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		position: relative
+		height: 134px
+		width: 100%
+		margin-bottom: 24px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		&::after
+			content: ''
+			position: absolute
+			background: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.72) 93.75%)
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 10
+	&__progressbar
+		z-index: 20
+		position: absolute
+		display: flex
+		align-items: center
+		top: 0
+		background: $green
+		height: 24px
+		width: 100%
+	&__progressbar-info
+		padding-left: 20px
+		color: $white
+		white-space: nowrap
+		@extend .p3RegularRoboto
+		width: 100%
+	&__author-info
+		padding-left: 20px
+		position: relative
+		z-index: 20
+		display: flex
+		align-items: center
+		transform: translateY(8px)
+	&__avatar
+		margin-right: 12px
+	&__name
+		color: $white
+		@extend .p2RegularRoboto
+	&__bottom
+		padding: 0 20px 20px 20px
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		height: 100%
+	&__title
+		color: $black
+		margin-bottom: 13px
+		@extend .h6BoldMontserrat
+	&__course-info
+		display: flex
+		margin-bottom: 32px
+	&__course-info-item
+		display: flex
+		align-items: center
+		&:not(:last-of-type)
+			margin-right: 16px
+		img
+			margin-right: 6px
+		span
+			color: $black
+			@extend .p2RegularRoboto
+	&__buttons-block
+		display: flex
+		flex-grow: 1
+		align-items: flex-end
+		.button
+			&:first-child
+				max-width: 104px
+			&:nth-child(2)
+				max-width: 77px
+			&:not(:last-of-type)
+				margin-right: 6px

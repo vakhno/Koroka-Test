@@ -92,14 +92,109 @@ $shadowActive: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51,
 	font-weight: bold
 	line-height: 20px
 
-// text
+// accent text
 .accent-text
 	cursor: pointer
 	color: $primary
 	&:hover
 		color: $hover
 
-// input
+// input search
+.input-search
+	position: relative
+	&__area
+		height: 56px
+		width: 100%
+		position: relative
+		background: $white
+		@extend .p2RegularRoboto
+		color: $black
+		box-shadow: $shadowDefault
+		outline: none
+		border: none
+		padding: 16px 20px 16px 44px
+		&::placeholder
+			transition: 0.3s
+			opacity: 1
+			color: rgba(17, 17, 17, 0.48)
+			@extend .p2RegularRoboto
+		&::-webkit-search-cancel-button
+			appearance: none
+			content: url('../images/icons/clearIcon.svg')
+			cursor: pointer
+			right: 22px
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			height: 16px
+			width: 16px
+		&:hover, &:focus
+			box-shadow: $shadowActive
+		&:focus + .input-search__icon-search
+			path
+				fill: $black
+		&:focus
+			&::placeholder
+				opacity: 0
+				transition: 0.3s
+				display: none
+	&__icon-search
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 16px
+		path
+			fill: $grayK
+
+// datalist
+.datalist
+	position: relative
+	height: 56px
+	&__label
+		color: rgba(17, 17, 17, 0.48)
+		position: absolute
+		left: 16px
+		top: 50%
+		@extend .p2RegularRoboto
+		transition: 0.3s
+		transform: translateY(-50%)
+		&--active
+			transition: 0.3s
+			@extend .p3RegularRoboto
+			transform: translateY(-22px)
+	&__area
+		width: 100%
+		height: 100%
+		padding: 0
+		padding: 26px 16px 0 16px
+		background: $white
+		border-radius: 4px
+		box-shadow: $shadowDefault
+		outline: none
+		border: none
+		@extend .p2RegularRoboto
+		&:hover, &:focus
+			box-shadow: $shadowActive
+		&::-webkit-calendar-picker-indicator
+			color: transparent
+		&::-webkit-calendar-picker-indicator
+			appearance: none
+			content: ''
+			background: url('../images/icons/dropdownIcon.svg') no-repeat
+			position: absolute
+			top: 54%
+			right: 20px
+			transform: translateY(-50%)
+			cursor: pointer
+	&--error
+		background: $redGirl !important
+		margin-bottom: 8px
+		@extend .p2RegularRoboto
+		&-details
+			color: $red
+			@extend .p2RegularRoboto
+
+// simple input
 .input
 	position: relative
 	width: 100%
@@ -203,6 +298,24 @@ $shadowActive: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51,
 		&:disabled
 			background: transparent
 			color: rgba($primary, 0.7)
+	&--secondary
+		background: transparent
+		color: $primary
+		border: 1px solid $primary
+		svg
+			path
+				fill: $primary
+		&:hover
+			background: rgba(110, 65, 226, 0.04)
+		&:active
+			background: $active
+		&:focus
+			background: transparent
+			border: 2px solid $grayS
+		&:disabled
+			background: transparent
+			border: 1px solid $disabled
+			color: $disabled
 
 // radio-button
 .radio

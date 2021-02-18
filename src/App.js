@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 // pages
-import {SignIn, Catalog, Help} from './pages/';
+import {SignIn, Catalog, Help, FreeTest} from './pages/';
 // components
 import Header from './components/Header/Header'
 
@@ -9,11 +9,12 @@ function App() {
 		<Router basename='/Koroka'>
 			<Switch>
 				<Route exact path='/' component={SignIn}/>
-				<>
+				<div className="content">
 					<Header/>
 					<Route exact path='/catalog' component={Catalog}/>
 					<Route exact path='/help' component={Help}/>
-				</>
+					<Route exact path='/test' component={FreeTest}/>
+				</div>
 			</Switch>
 		</Router>
 	);

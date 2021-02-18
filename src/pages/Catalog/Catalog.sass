@@ -1,0 +1,28 @@
+@import '../../sass/variables'
+
+.catalog
+	&__courses
+		display: grid
+		justify-content: center
+		justify-items: center
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+		grid-gap: 32px
+	&__page-info
+		margin-bottom: 32px
+	&__title
+		color: $black
+		@extend .h3BoldMontserrat
+		margin-bottom: 12px
+	&__text
+		max-width: 724px
+		color: $black
+		@extend .p2RegularRoboto
+	&__search-form
+		margin-bottom: 32px
+		display: flex
+		.input-search
+			width: 100%
+			margin-right: 20px
+		.datalist
+			width: 100%
+			max-width: 259px

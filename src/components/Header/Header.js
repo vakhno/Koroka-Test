@@ -26,7 +26,7 @@ function Header() {
 	return (
 		<header className='header'>
 			<div className="header__wrapper">
-				<Link className="header__logo">Logo</Link>
+				<Link to='/' className="header__logo">Logo</Link>
 				<nav className="header__nav">
 					<ul className="header__nav-items">
 						{ 
