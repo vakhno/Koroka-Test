@@ -18,7 +18,7 @@ function Form2() {
 	
 	return (
 		<form id="form2" onSubmit={handleSubmit(onSubmit)} className="profile__form">
-			<div className="input">
+			<div className={`input ${errors.name2 ? 'input--margin-error' : ''}`}>
 				<label className={`input__label`} htmlFor="name2">Your name</label>
 				<input 
 					className={`input__area ${errors.name2 ? 'input--error': ''}`} 
@@ -41,7 +41,7 @@ function Form2() {
 				/>
 				{errors.name2 ? <span className='input--error-details'>{errors.name2.message}</span> : ''}
 			</div>
-			<div className="input">
+			<div className={`input ${errors.email2 ? 'input--margin-error' : ''}`}>
 				<label className="input__label" htmlFor="email2">E-mail</label>
 				<input 
 					className={`input__area ${errors.email2 ? 'input--error': ''}`} 
@@ -60,7 +60,7 @@ function Form2() {
 				/>
 				{errors.email2 ? <span className='input--error-details'>{errors.email2.message}</span> : ''}
 			</div>
-			<div className="input">
+			<div className={`input ${errors.phone ? 'input--margin-error' : ''}`}>
 				<label className="input__label" htmlFor="phone">Phone</label>
 				<input 
 					className={`input__area ${errors.phone ? 'input--error': ''}`} 

@@ -17,7 +17,7 @@ function Form1({changeForm}) {
 
 	return (
 		<form id='form1' onSubmit={handleSubmit(onSubmit)} className="profile__form" autoComplete="off">
-			<div className="input">
+			<div className={`input ${errors.email ? 'input--margin-error' : ''}`}>
 				<label className={`input__label ${watchEmail ? 'input__label--active' : null}`} htmlFor="email">Email</label>
 				<input 
 					className={`input__area ${errors.email ? 'input--error': ''}`}
@@ -36,7 +36,7 @@ function Form1({changeForm}) {
 				/>
 				{errors.email ? <span className='input--error-details'>{errors.email.message}</span> : null}
 			</div>
-			<div className="input">
+			<div className={`input ${errors.password ? 'input--margin-error' : ''}`}>
 				<label className={`input__label ${watchPassword ? 'input__label--active' : null}`} htmlFor="password">Password</label>
 				<input 
 					className={`input__area ${errors.password ? 'input--error': ''}`}
