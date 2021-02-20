@@ -32,7 +32,7 @@ function Form2() {
 					ref={register({
 						required: "Required field",
 						minLength: {
-							value: 6,
+							value: 2,
 							message: 'Minimum 2 symbols'
 						},
 						maxLength: {
