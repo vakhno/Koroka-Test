@@ -8,7 +8,7 @@ import {useHistory} from 'react-router-dom'
 
 function Form2() {
 	const history = useHistory();
-	const {register, handleSubmit, watch, errors, formState: {isValid}} = useForm()
+	const {register, handleSubmit, watch, errors, formState: {isValid}} = useForm({mode: 'onChange'})
 	const [privacyPoliceModal, setPrivacyPoliceModal] = useState(false)
 
 	const watchName = watch('name', '')
