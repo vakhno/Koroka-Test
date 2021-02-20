@@ -8,8 +8,12 @@ import {useHistory} from 'react-router-dom'
 
 function Form2() {
 	const history = useHistory();
-	const {register, handleSubmit, errors} = useForm()
+	const {register, handleSubmit, watch, errors, formState: {isValid}} = useForm()
 	const [privacyPoliceModal, setPrivacyPoliceModal] = useState(false)
+
+	const watchName = watch('name', '')
+	const watchEmail = watch('email', '')
+	const watchPhone = watch('phone', '')
 	
 	const onSubmit = (data) => {
 		console.log(data)
@@ -18,36 +22,36 @@ function Form2() {
 	
 	return (
 		<form id="form2" onSubmit={handleSubmit(onSubmit)} className="profile__form">
-			<div className={`input ${errors.name2 ? 'input--margin-error' : ''}`}>
-				<label className={`input__label`} htmlFor="name2">Your name</label>
+			<div className={`input ${errors.name ? 'input--margin-error' : ''}`}>
+				<label className={`input__label`} htmlFor="name">Your name</label>
 				<input 
-					className={`input__area ${errors.name2 ? 'input--error': ''}`} 
+					className={`input__area ${errors.name ? 'input--error' : (watchName && !errors.name) || isValid ? "input--success" : ""}`} 
 					type="text" 
-					name="name2" 
-					id="name2"
+					name="name"
+					id="name"
 					ref={register({
 						required: "Required field",
 						minLength: {
-							value: 2,
-							message: 'Minimum 2 symbol'
+							value: 6,
+							message: 'Minimum 2 symbols'
 						},
 						maxLength: {
 							value: 12,
-							message: 'Maximum length is 12 symbols'
+							message: 'Maximum 12 symbols'
 						},
 					})}
 					onFocus={(e) => e.target.labels[0].classList.add('input__label--active')}
 					onBlur={(e) => !e.target.value ? e.target.labels[0].classList.remove('input__label--active') : null}
 				/>
-				{errors.name2 ? <span className='input--error-details'>{errors.name2.message}</span> : ''}
+				{errors.name ? <span className='input--error-details'>{errors.name.message}</span> : ''}
 			</div>
-			<div className={`input ${errors.email2 ? 'input--margin-error' : ''}`}>
-				<label className="input__label" htmlFor="email2">E-mail</label>
+			<div className={`input ${errors.email ? 'input--margin-error' : ''}`}>
+				<label className="input__label" htmlFor="email">E-mail</label>
 				<input 
-					className={`input__area ${errors.email2 ? 'input--error': ''}`} 
+					className={`input__area ${errors.email ? 'input--error' : (watchEmail && !errors.email) || isValid ? "input--success" : ""}`} 
 					type="email" 
-					name="email2" 
-					id="email2"
+					name="email" 
+					id="email"
 					ref={register({
 						required: "Required field",
 						pattern: {
@@ -58,12 +62,12 @@ function Form2() {
 					onFocus={(e) => e.target.labels[0].classList.add('input__label--active')}
 					onBlur={(e) => !e.target.value ? e.target.labels[0].classList.remove('input__label--active') : null}
 				/>
-				{errors.email2 ? <span className='input--error-details'>{errors.email2.message}</span> : ''}
+				{errors.email ? <span className='input--error-details'>{errors.email.message}</span> : ''}
 			</div>
 			<div className={`input ${errors.phone ? 'input--margin-error' : ''}`}>
 				<label className="input__label" htmlFor="phone">Phone</label>
 				<input 
-					className={`input__area ${errors.phone ? 'input--error': ''}`} 
+					className={`input__area ${errors.phone ? 'input--error' : (watchPhone && !errors.phone) || isValid ? "input--success" : ""}`} 
 					type="tel" 
 					name="phone" 
 					id="phone"

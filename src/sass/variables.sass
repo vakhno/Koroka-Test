@@ -19,6 +19,7 @@ $red: #DB524E
 $superRed: #C7302B
 $green: #27AE60
 $blue: #428BF9
+$yellow: #FFF5C0
 
 // sizes
 $header: 76px
@@ -222,15 +223,20 @@ $shadowActive: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51,
 		outline: none
 		border: none
 		@extend .p2RegularRoboto
+		&:-webkit-autofill
+			-webkit-box-shadow: 0 0 0 30px $yellow inset
 	&:hover
 		box-shadow: $shadowActive
 	&--error
 		background: $redGirl !important
 		margin-bottom: 8px
+		-webkit-box-shadow: 0 0 0 30px $redGirl inset !important
 		@extend .p2RegularRoboto
 		&-details
 			color: $red
 			@extend .p2RegularRoboto
+	&--success
+		background: $green !important
 	&--margin-error
 		margin-bottom: 36px !important
 		transition: 0.3s
@@ -415,5 +421,5 @@ $shadowActive: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51,
 				background: $primary
 				opacity: 0.4
 	&--error > input
-		background: $redGirl
-		border-color: $redGirl
+		background: $redGirl !important
+		border-color: $redGirl !important
