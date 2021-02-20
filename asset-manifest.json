@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Koroka-Test/static/css/main.06870db2.chunk.css",
-    "main.js": "/Koroka-Test/static/js/main.4e3cb459.chunk.js",
-    "main.js.map": "/Koroka-Test/static/js/main.4e3cb459.chunk.js.map",
+    "main.js": "/Koroka-Test/static/js/main.fc07653e.chunk.js",
+    "main.js.map": "/Koroka-Test/static/js/main.fc07653e.chunk.js.map",
     "runtime-main.js": "/Koroka-Test/static/js/runtime-main.f75e8b36.js",
     "runtime-main.js.map": "/Koroka-Test/static/js/runtime-main.f75e8b36.js.map",
     "static/js/2.91f143f4.chunk.js": "/Koroka-Test/static/js/2.91f143f4.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.f75e8b36.js",
     "static/js/2.91f143f4.chunk.js",
     "static/css/main.06870db2.chunk.css",
-    "static/js/main.4e3cb459.chunk.js"
+    "static/js/main.fc07653e.chunk.js"
   ]
 }
